@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bot-telegram-grupo
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: APP_NAME
+        value: "Ope IVAP 2026 - Personal de Apoyo"
+      - key: APP_LINK
+        value: "https://txiru79.github.io/personal-de-apoyo/"
+      - key: LATEST_VERSION
+        value: "4.1"
